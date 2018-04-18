@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './style.css';
+import 'font-awesome/css/font-awesome.min.css';
+
 //const Footero = ({namedContent}) => {
 const Footero= (props) => {
   return (
