@@ -13,13 +13,6 @@ const Footero= (props) => {
   )
 }
 
-// const Edu= (props) => {
-//   return(
-//     <div className='Edu'>
-//     </div>
-//   )
-// }
-
 class App extends Component {
   render() {
     return (
