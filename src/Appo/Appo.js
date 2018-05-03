@@ -26,6 +26,14 @@ const ContactContainer = (props) => {
   )
 }
 
+ const Edu= (props) => {
+   return(
+     <div className='Edu'>
+       rtjhgiug
+     </div>
+   )
+ }
+
 class Appo extends Component {
   render() {
     return (
@@ -38,6 +46,7 @@ class Appo extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <ContactContainer/>
+        <Edu/>
       </div>
     )
   }
