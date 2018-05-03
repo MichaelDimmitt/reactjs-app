@@ -27,8 +27,8 @@ const LandingPage= (props) => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={props.logo} className="App-logo" alt="logo" />
-        {/*logo is not passed in this circumstance so we are leaving it out.*/}
+        {/*<img src={props.logo} className="App-logo" alt="logo" />*/
+        /*logo is not passed in this circumstance so we are leaving it out.*/}
         <h1 className="App-title">{props.propExample}</h1>
       </header>
       <p className="App-intro">
@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <div>
         {/*<HeaderComponent/>*/}
-        <LandingPage logo={logo}  propExample='prop example' />
+        <LandingPage propExample='prop example' />
         <FooterComponent namedContent='test passed' additionalContent='additional information'/>
       </div>
     );
