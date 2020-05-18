@@ -1,42 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './style.css';
-//const Footero = ({namedContent}) => {
-const Footero= (props) => {
+import 'font-awesome/css/font-awesome.min.css';
+
+// stateless component that makes use of 
+// dereferencing the props object, into two variables.
+const FooterComponent = ({namedContent, additionalContent}) => {
   return (
     <div>
-      {props.namedContent}
+      {namedContent}
     </div>
   )
 }
 
-
-
-const Contact_row = ({a,b,c,}) => {
-	return (<div>
-		<li class={a}>
-			<i class={b}></i>
-			<a href={c}/>
-		</li>
-	</div>)
-}
-<div class="contact-container container-block">
-  <ul class="list-unstyled contact-list">
-    <Contact_row a='email' b='fa fa-envelope' c='mailto: volodymyr.pliuta@vladev.net">volodymyr.pliuta@vladev.net'/>
-    <li class=""><i class=""></i><a href="</a></li>
-    <li class="phone"><i class="fa fa-phone"></i><a href="tel:904 383 6783">904 383 6783</a></li>
-    <li class="github"><i class="fa fa-github"></i><a href="https://github.com/americanman">GitHub</a></li>
-    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/volodymyr-pliuta-40a888115" target="_blank">LinkedIn.com</a></li>
- </ul>
-</div><!--//contact-container-
-
-const Appo= (props) => {
+// const Edu= (props) => {
+//   return(
+//     <div className='Edu'>
+//     </div>
+//   )
+// }
+// stateless component that makes use of the props object.
+// also {} allow you to dereference html to javascript 
+// inside a return of html to a render function or inside a render function.
+const LandingPage= (props) => {
+  console.log(props)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome to OpenHax</h1>
+        {/*<img src={props.logo} className="App-logo" alt="logo" />*/
+        /*logo is not passed in this circumstance so we are leaving it out.*/}
+        <h1 className="App-title">{props.propExample}</h1>
       </header>
       <p className="App-intro">
         To get started, edit <code>src/App.js</code> and save to reload.
@@ -49,9 +42,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/*<Headero/>*/}
-        <Appo/>
-        <Footero namedContent='test passed'/>
+        {/*<HeaderComponent/>*/}
+        <LandingPage propExample='prop example' />
+        <FooterComponent namedContent='test passed' additionalContent='additional information'/>
       </div>
     );
   }
